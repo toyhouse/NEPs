@@ -26,7 +26,7 @@ Newton Encoded Asset Transaction(NEAT) defines the root data type for all asset 
 
 ## Abstract
 
-Newton Encoded Asset Transaction(NEAT) is a Domain Specific Language (DSL) that represents asset transactions with computable Bounded Accoutability. The goal of NEAT is to provide a rigorous language to construct asset  portfoilios on an exchange platform to facilitate asset-sharing practice. NEAT facilitates sharing by always make both providers and receivers of the asset accountable of their actions in terms of bounded collaterals. Every NEAT-based transaction must have computable and verifiable data items that represent the accountability of the transaction participants. In other words, all participants must earn their reputation over time, or they must deposit a reasonable amount of asset to insure their own transactional actions. With Newton's immutable ledger and accounts represented by NewID, accounts with good credit history will be able to carry more trust-worthiness and will be given more freedom in practicing wider ranges of commercial activities. To instill accountability to every NEAT-based transactions, every transaction is associated with the following security features:
+Newton Encoded Asset Transaction (NEAT) is a Domain Specific Language (DSL) that represents asset transactions with computable Bounded Accoutability. The goal of NEAT is to provide a rigorous language to construct asset  portfoilios on an exchange platform to facilitate asset-sharing practice. NEAT facilitates sharing by always make both providers and receivers of the asset accountable of their actions in terms of bounded collaterals. Every NEAT-based transaction must have computable and verifiable data items that represent the accountability of the transaction participants. In other words, all participants must earn their reputation over time, or they must deposit a reasonable amount of asset to insure their own transactional actions. With Newton's immutable ledger and accounts represented by NewID, accounts with good credit history will be able to carry more trust-worthiness and will be given more freedom in practicing wider ranges of commercial activities. To instill accountability to every NEAT-based transactions, every transaction is associated with the following security features:
 * every transaction should be guaranteed by a set of collateral asset, deposited by participants of the transactions or the transaction platform.
 * all transactions must be tagged with secure timestamping services,
 * public keys for participating accounts (NewID and NewID-based NewKYC),
@@ -62,7 +62,7 @@ NEAT is about providing a unifying, and formally verifiable data type that repre
 
 ### Time-bound ACID Transactions
 
-A key feature of NEAT is the notion of Bounded Accountability. The security of accountability is to ensure by data security, often prescribed as the [ACID](https://en.wikipedia.org/wiki/ACID) properties of transaction, Atomicity, Consistency, Isolation, and Durability. The "economic value" or transactional accountability is bounded by the "correctness" of contract execution during runtime. Therefore the correctness is also bounded by a time window, from the time point of contract initiation, up to the point of contract fulfillment or failure acknowledgement. Knowing that Newchain is an non-stoppable real-time immutable data store infrastructure, participants of NEAT-based transactions can judge the boundaries of accountability based on the physically meaningful timestamps, and ACID properties associated with data transactions. All claims of accountability must be follow the consistency in timestamped records to infer their respective judgemental outcomes. Combining this timestamped data with formal data analysis tools, such as the System Specificatin language: [TLA+](https://lamport.azurewebsites.net/tla/tla.html). An abstract specification[9] language such as TLA+, can be used to define the possibility space of accountability in temporal dimensions, and allow the possibility state space to be symbolically enumerated and examined by participants prior to commiting to certain transaction. Therefore, either transaction participants conduct extensive verification processes using formally defined logic, or they simply declare the admission of bounded risks, and therefore agree to the said Bounded Accoutability. By explicitly denoting transactions with a computable field: "Bounded Accountability", such data field provides a formal structure to express risk profiles of all transactional activities uniformally. All risks that participants are willing to take can be expressed in a set of objectively defined risk assessment statement executable by temporal logic. 
+A key feature of NEAT is the notion of Bounded Accountability. The security of accountability is to ensure by data security, often prescribed as the [ACID](https://en.wikipedia.org/wiki/ACID) properties of transaction, Atomicity, Consistency, Isolation, and Durability. The "economic value" or transactional accountability is bounded by the "correctness" of contract execution during runtime. Therefore the correctness is also bounded by a time window, from the time point of contract initiation, up to the point of contract fulfillment or failure acknowledgement. Knowing that Newchain is an non-stoppable real-time immutable data store infrastructure, participants of NEAT-based transactions can judge the boundaries of accountability based on the physically meaningful timestamps, and ACID properties associated with data transactions. All claims of accountability must be follow the consistency in timestamped records to infer their respective judgemental outcomes. Combining this timestamped data with formal data analysis tools, such as the System Specificatin language: TLA+<sup>[9](#ref-9)</sup>. An abstract specification language such as TLA+, can be used to define the possibility space of accountability in temporal dimensions, and allow the possibility state space to be symbolically enumerated and examined by participants prior to commiting to certain transaction. Therefore, either transaction participants conduct extensive verification processes using formally defined logic, or they simply declare the admission of bounded risks, and therefore agree to the said Bounded Accoutability. By explicitly denoting transactions with a computable field: "Bounded Accountability", such data field provides a formal structure to express risk profiles of all transactional activities uniformally. All risks that participants are willing to take can be expressed in a set of objectively defined risk assessment statement executable by temporal logic. 
 
 #### Temporal Logic Reasoning Engine: Behavioral Equivalence
 
@@ -98,7 +98,7 @@ NCA, NEAT :=
                 Repeat multiple instances of NCA;
                 Terminate all NCA transactions;
 ```
-                
+
 More detail of NEAT syntax will be explained in [NEP-22: Newton Composite Asset](nep-22.md), because data asset is compositional in nature, and the data content of a NEAT is almost always composed of other data types. 
 
 
@@ -168,7 +168,7 @@ The focus of NEAT is all about secure real-time transactions, that means perform
 
 To manage data at scale, NEAT will follow an architectural guideline that separates the overall system into two planes, namelythe Control Plane and Data Plane. The purpose of separating data from the controlling mechanism is to embrace the convention in the Cloud Native movement. Separating systems into composable modules made of meshed services. The origin of this idea of Control Plane vs. Data Plane was popularized by Istio's Service Mesh architecture. However, this high level division of responsibilities is a useful guideline. The matching classification to NEAT and Newton's namespace is shown as below.
 
-![Istio Architecture Diagram](images/IstioArchitecture.png)
+![Istio Architecture Diagram](../assets/nep-20/IstioArchitecture.png)
 
 ### Continuous Workflow in evolving NEAT
 
@@ -198,7 +198,7 @@ Every NEAT type should be a totally isolated container of its own risks. Every s
 
 ### The Mechanisms of Proofs
 
-Every sub class of NEAT must go through a rigorous process to demonstrate that risks are divided into explicitly defined namespaces. The techical term is called identifying "Behavioral Equivalence". Assets that can be exchanged through the same kind of transactional mechanisms, should use the same "class" of NEAT contract. The security features of each NEAT contract should be proven through the software development process. Certain anecdotal thinking can be found in Steiner's blog entry[[5](https://blog.ethcore.io/security-is-a-process-a-postmortem-on-the-parity-multi-sig-library-self-destruct/.)]. However, to reach a more rigorous level of security, NEAT should try to prove and approve every new subclass following formal methods as described in Rosu's paper: [6]. Rosu also leads the [K Framework](http://www.kframework.org/index.php/Main_Page) development, which is a rewrite-based language design model that can be used to define and verify formal properties of any language. The argument that NEAT must be designed as a proto-language can be traced back to the legend of Tower of Babel, see <sup>[7](#ref-7)</sup>. By having a sound and unifying linguistic root for all transactions, it will significantly broaden the application areas, and more importantly, reduce the risk the risks of misinterpretation, and increase the overall security of the entire transactional system. The working mechanism of proofs are managed in a namespace known as types of NEAT, so that all risk factors can be first reasoned in the categories, or types of risks, before committing to real world applications. 
+Every sub class of NEAT must go through a rigorous process to demonstrate that risks are divided into explicitly defined namespaces. The techical term is called identifying "Behavioral Equivalence". Assets that can be exchanged through the same kind of transactional mechanisms, should use the same "class" of NEAT contract. The security features of each NEAT contract should be proven through the software development process. Certain anecdotal thinking can be found in Steiner's blog entry<sup>[5](#ref-5)</sup>. However, to reach a more rigorous level of security, NEAT should try to prove and approve every new subclass following formal methods as described in Rosu's paper<sup>[6](#ref-6)</sup>. Rosu also leads the [K Framework](http://www.kframework.org/index.php/Main_Page) development, which is a rewrite-based language design model that can be used to define and verify formal properties of any language. The argument that NEAT must be designed as a proto-language can be traced back to the legend of Tower of Babel, see <sup>[7](#ref-7)</sup>. By having a sound and unifying linguistic root for all transactions, it will significantly broaden the application areas, and more importantly, reduce the risk the risks of misinterpretation, and increase the overall security of the entire transactional system. The working mechanism of proofs are managed in a namespace known as types of NEAT, so that all risk factors can be first reasoned in the categories, or types of risks, before committing to real world applications. 
 
 #### What is a proof in NEAT?
 
@@ -249,7 +249,7 @@ Test cases for NEAT should first be conducted on dedicated Newton Test Chain, so
 
 <a name="ref-6"></a>
 
-6. Grigore Rosu, Formal Design, Implementation and Verification of Blockchain Languages, ([paper URL](refs/Formal-Design-Implementation-and-Verification-of-Blockchain-Languages.pdf)), ([slide URL](refs/Rosu_slides.pdf))([Video URL](https://youtu.be/ip9ihbMI07U)), last accessed: May 8, 2020
+6. Grigore Rosu, Formal Design, Implementation and Verification of Blockchain Languages, [Paper (University of Illinois)](https://drops.dagstuhl.de/opus/volltexte/2018/9172/pdf/LIPIcs-FSCD-2018-2.pdf), [Slides (University of Waterloo)](https://ece.uwaterloo.ca/~blockchain/pdfs/Rosu.pdf), [Video (Youtube)](https://youtu.be/ip9ihbMI07U)
 
 <a name="ref-7"></a>
 
@@ -261,20 +261,21 @@ Test cases for NEAT should first be conducted on dedicated Newton Test Chain, so
 
 <a name="ref-9"></a>
 
-9. Leslie Lamport, Specifying Systems: The TLA+ Language and Tools for Hardware and Software Engineering, Addison Wesley, 2002 
+9. [Leslie Lamport, Specifying Systems: The TLA+ Language and Tools for Hardware and Software Engineering](https://lamport.azurewebsites.net/tla/tla.html), Addison Wesley
 
 <a name="ref-10"></a>
 
-10. Dominic Betts Julián Domínguez Grigori Melnik Fernando Simonazzi Mani Subramanian, [Exploring CQRS and Event Sourcing](refs/Exploring_CQRS_and_Event_Sourcing.pdf), Microsoft Download Center, last accessed: May 22, 2020
+10. Dominic Betts Julián Domínguez Grigori Melnik Fernando Simonazzi Mani Subramanian, [Exploring CQRS and Event Sourcing](refs/Exploring_CQRS_and_Event_Sourcing.pdf), Microsoft Download Center
 
 
 <a name="ref-11"></a>
 
-11. [Alex Pentland, Alexander Lipton, and Thomas Hardjono, Building the New Economy](https://wip.mitpress.mit.edu/new-economy), MIT Press URL
+11. [Alex Pentland, Alexander Lipton, and Thomas Hardjono, Building the New Economy](https://wip.mitpress.mit.edu/new-economy), MIT Press
 
 <a name="ref-12"></a>
 
 12. [Urbit](https://urbit.org): [A Decentralized Personal Server Platform](https://en.wikipedia.org/wiki/Urbit), Wikipedia
+13. 
 ## Copyright
-Copyright and related rights via
-[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)
+
+Copyright and related rights waived via [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
