@@ -275,7 +275,8 @@ Test cases for NEAT should first be conducted on dedicated Newton Test Chain, so
 <a name="ref-12"></a>
 
 12. [Urbit](https://urbit.org): [A Decentralized Personal Server Platform](https://en.wikipedia.org/wiki/Urbit), Wikipedia
-13. 
+
+    
 ## Copyright
 
 Copyright and related rights waived via [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
