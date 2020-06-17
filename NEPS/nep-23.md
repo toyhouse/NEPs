@@ -1,4 +1,4 @@
-# NEP-23: NEAT Backed Currency (NBC)
+# NEP 23: NEAT Backed Currency (NBC)
 
 | Item | Description |
 |:-|:-|
@@ -10,7 +10,7 @@
 | Type | Standard |
 | Category | Technical |
 | Created | 2020-05-07 |
-| Updated | 2020-05-07 |
+| Updated |  |
 
 ## Simple Summary
 
@@ -80,7 +80,7 @@ The creation of NBC should follow a conservative stance. The goal is not to quic
 
 ## Rationale (optional)
 
-Allowing non-technical people to create NBC is the mission. However, there are much more governance techniques required to manage and orchestrate the communities that uses NBC. Currency issuance is clearly going to be a new dimension that organizations that adopts NBC must learn from the overall Newtonc Community. Therefore, a think tank organization that specializes in currency mechanism design must be initiated to develop material that shows NBC creators and participants to better practice their use of NBC. Currency is designed to be liquidable assets, so that it is a double edged swords. It must be used with tremendous care.
+Allowing non-technical people to create NBC is the mission. However, there are much more governance techniques required to manage and orchestrate the communities that uses NBC. Currency issuance is clearly going to be a new dimension that organizations that adopts NBC must learn from the overall Newton Community. Therefore, a think tank organization that specializes in currency mechanism design must be initiated to develop material that shows NBC creators and participants to better practice their use of NBC. Currency is designed to be liquidable assets, so that it is a double edged swords. It must be used with tremendous care.
 
 
 ## Test Cases (optional)
@@ -97,11 +97,11 @@ Before we deploy the first NBC, certain kind of social dynamics and organization
 
 Ideally, all Newton Community's incentive and organizational structures should be managed through the governance procedures of NBC.
 
-## Security Considerations (optional)
+## Security Considerations
 
 To ensure security, creation of NBC must go through certain stress test and system test phases. The proposition here is that the first three years, all NBC creation should be submitted through both technical and branding committee, so that decisions for creating currencies would not contradict, or competing with each other for obvious reasons. Overtime, the competing interests should be encoded into some kind of Byzantine Fault Tolerance Mechanism.
 
-## References (optional)
+## References
 1. Leslie Lamport, Time, Clocks, and the Ordering of Events in a Distributed System, Communications of the ACM, July, 1978.
 
 
